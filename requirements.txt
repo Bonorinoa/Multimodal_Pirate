@@ -4,7 +4,7 @@ langchain-groq
 langchain-anthropic
 langchain-openai
 
-opencv-python
+opencv-python-headless
 
 streamlit
 streamlit_chat
