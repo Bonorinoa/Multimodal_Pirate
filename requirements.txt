@@ -1,0 +1,11 @@
+langchain
+langchain-core
+langchain-groq
+langchain-anthropic
+langchain-openai
+
+opencv-python
+
+streamlit
+streamlit_chat
+streamlit_mic_recorder
