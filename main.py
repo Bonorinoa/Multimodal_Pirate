@@ -173,7 +173,8 @@ def chat_main():
 
     if audio is not None:
         audio_bytes = audio['bytes']
-        st.sidebar.audio(audio_bytes)
+        st.sidebar.audio(audio_bytes,
+                         format="audio/mpeg")
 
         # Transcribe audio input
         with st.spinner('Transcribing...'):
