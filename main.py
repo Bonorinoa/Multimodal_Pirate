@@ -61,7 +61,7 @@ def process_image_with_anthropic(image_bytes):
 def transcribe_audio(audio_bytes):
     # Using OpenAI Whisper for transcription
     audio_bio = io.BytesIO(audio_bytes)
-    audio_bio.name = 'audio.webm'
+    audio_bio.name = 'audio.wav'
     transcript = client.audio.transcriptions.create(model="whisper-1", 
                                          file=audio_bio, language="en")
     return transcript.text
@@ -145,6 +145,7 @@ def chat_main():
         audio = mic_recorder(start_prompt="Start recording", 
                              stop_prompt="Stop recording", 
                              key='recorder',
+                             format="wav",
                              just_once=True)
         
         st.markdown("### **Share a picture:**")
